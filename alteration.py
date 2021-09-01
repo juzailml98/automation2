@@ -85,13 +85,14 @@ while(True):
         print('eyes closed')
         score=score+1
         cv2.putText(frame,"Closed or face not found",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
-        
+        print(count)
+
 
     else:
         print('eyes open')
         score=score-2
         cv2.putText(frame,"Open",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
-        
+        print(count)
 
 
     if(score<0):
