@@ -21,6 +21,7 @@ reye = cv2.CascadeClassifier(model_path+"\haarmodels/haarcascade_righteye_2split
 
 #saved model is imported
 model = load_model(model_path+"\cnnCat2.h5")
+
 ###the below message ensures that every preconditions are set
 
 print("recieved the model,and casscade,and loaded the necessary packages")
