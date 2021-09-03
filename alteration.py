@@ -1,7 +1,8 @@
 # all the necessary modules are imported
 import cv2
 import os
-from keras.models import load_model
+from tensorflow import keras
+#from keras.models import load_model
 import numpy as np
 import pygame
 from pygame import mixer
@@ -20,7 +21,7 @@ reye = cv2.CascadeClassifier(model_path+"\haarmodels/haarcascade_righteye_2split
 
 
 #saved model is imported
-model = load_model(model_path+"\cnnCat2.h5")
+model = keras.models.load_model(model_path+"/cnnCat2.h5")
 
 ###the below message ensures that every preconditions are set
 
