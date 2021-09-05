@@ -1,8 +1,10 @@
 # all the necessary modules are imported
 import cv2
 import os
-from tensorflow import keras
-#from keras.models import load_model
+import tensorflow as tf
+
+#import keras
+#import keras.models
 import numpy as np
 import pygame
 from pygame import mixer
@@ -10,32 +12,35 @@ import time
 
 
 #pygame sound module is initialized
-mixer.init()
-sound = mixer.Sound('sound/alarm.wav')
+#mixer.init()
+#sound = mixer.Sound('sound/alarm.wav')
 #haar cascade files necessary to detect faces and eyes are imported
 model_path=os.getcwd()
-pather=r""+model_path
-face = cv2.CascadeClassifier(model_path+"\haarmodels/haarcascade_frontalface_alt.xml")
-leye = cv2.CascadeClassifier(model_path+"\haarmodels/haarcascade_lefteye_2splits.xml")
-reye = cv2.CascadeClassifier(model_path+"\haarmodels/haarcascade_righteye_2splits.xml")
+pather=model_path
+face = cv2.CascadeClassifier(model_path+"/haarmodels/haarcascade_frontalface_alt.xml")
+leye = cv2.CascadeClassifier(model_path+"/haarmodels/haarcascade_lefteye_2splits.xml")
+reye = cv2.CascadeClassifier(model_path+"/haarmodels/haarcascade_righteye_2splits.xml")
 
 
 #saved model is imported
-model = keras.models.load_model(model_path+"/cnnCat2.h5")
+model = tf.keras.models.load_model("cnnCat2.h5")
+model.summary()
 
 ###the below message ensures that every preconditions are set
 
 print("recieved the model,and casscade,and loaded the necessary packages")
 
 #below code ensures that camera is available by giving a blink sound
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(0)
 if cap.isOpened():
-    sound.play()
-    pygame.time.delay(2000)
-    sound.stop()
+    print("camera is working")
+    #sound.play()
+    #pygame.time.delay(2000)
+    #sound.stop()
 else:
-    pygame.time.delay(4000)
-    sound.stop()
+    print("camera is not working")
+    #pygame.time.delay(4000)
+    #sound.stop()
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL
 
 score=0
@@ -87,14 +92,14 @@ while(True):
         print('eyes closed')
         score=score+1
         cv2.putText(frame,"Closed or face not found",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
-        print(count)
+        #print(count)
 
 
     else:
         print('eyes open')
         score=score-2
         cv2.putText(frame,"Open",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
-        print(count)
+        #print(count)
 
 
     if(score<0):
@@ -105,13 +110,15 @@ while(True):
         score=50
 
         #try:
-        sound.play()
+        #sound.play()
+        print("hai")
 
 
         #except:  # isplaying = False
             #pass
     else:
-        sound.stop()
+        #sound.stop()
+        print("hello")
 
 
 
