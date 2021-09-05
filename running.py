@@ -65,7 +65,7 @@ while(True):
     left_eye = leye.detectMultiScale(gray)
 
     right_eye =  reye.detectMultiScale(gray)
-    print("the value of right eye",len(right_eye))
+    #print("the value of right eye",len(right_eye))
 
 
 # the below 2 lines of code is for the demeonstration of finding face
