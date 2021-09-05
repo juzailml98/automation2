@@ -51,7 +51,7 @@ while(True):
     lpred=[0,32]
     ret, frame = cap.read()
     #height,width = frame.shape[:2]
-    #frame=cv2.flip(frame,0)
+    frame=cv2.flip(frame,0)
 
 #convert the rgb image to grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
