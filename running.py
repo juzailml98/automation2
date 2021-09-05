@@ -88,7 +88,7 @@ while(True):
     if(rpred[0]==0) or (len(faces)==0):
         print('eyes closed')
         score=score+1
-        cv2.putText(frame,"Closed or face not found",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
+        cv2.putText(frame,"eyes closed",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
         #print(count)
 
 
@@ -108,20 +108,20 @@ while(True):
 
         #try:
         #sound.play()
-        print("hai")
+        pass
 
 
         #except:  # isplaying = False
             #pass
     else:
         #sound.stop()
-        print("hello")
+        pass
 
 
 
 
     cv2.imshow('frame',frame)
-    
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 #once we press q entire process is shut down
