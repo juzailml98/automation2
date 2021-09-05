@@ -57,7 +57,7 @@ while(True):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 #here faces are detected
     #faces = face.detectMultiScale(gray,minNeighbors=5,scaleFactor=1.1,minSize=(25,25))
-    print("the number of faces detected is",len(faces))
+    #print("the number of faces detected is",len(faces))
 #below code detects left_eye and right_eye
     left_eye = leye.detectMultiScale(gray)
 
