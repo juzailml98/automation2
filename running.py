@@ -21,7 +21,7 @@ reye = cv2.CascadeClassifier(model_path+"/haarmodels/haarcascade_righteye_2split
 
 
 model = tf.keras.models.load_model("cnnCat2.h5")
-model.summary()
+
 
 
 
@@ -46,7 +46,7 @@ height=480
 width=640
 
 while(True):
-    localtime1=time.time()
+
     rpred=[0,32]
     lpred=[0,32]
     ret, frame = cap.read()
@@ -121,8 +121,7 @@ while(True):
 
 
     cv2.imshow('frame',frame)
-    localtime2=time.time()
-    print(localtime2-localtime1)
+    
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 #once we press q entire process is shut down
