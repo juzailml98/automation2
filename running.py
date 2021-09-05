@@ -56,7 +56,7 @@ while(True):
 #convert the rgb image to grayscale
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 #here faces are detected
-    faces = face.detectMultiScale(gray,minNeighbors=5,scaleFactor=1.1,minSize=(25,25))
+    #faces = face.detectMultiScale(gray,minNeighbors=5,scaleFactor=1.1,minSize=(25,25))
     print("the number of faces detected is",len(faces))
 #below code detects left_eye and right_eye
     left_eye = leye.detectMultiScale(gray)
@@ -85,7 +85,8 @@ while(True):
         break
 
 #below code checks whtether eye of face is detected or faces detected
-    if(rpred[0]==0) or (len(faces)==0):
+    #if(rpred[0]==0) or (len(faces)==0):
+    if(rpred[0]==0):
         print('eyes closed')
         score=score+1
         cv2.putText(frame,"eyes closed",(10,height-20), font, 1,(255,255,255),1,cv2.LINE_AA)
