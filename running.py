@@ -6,6 +6,7 @@ import numpy as np
 import pygame
 from pygame import mixer
 import time
+import led
 
 
 
@@ -34,10 +35,12 @@ if cap.isOpened():
     #sound.play()
     #pygame.time.delay(2000)
     #sound.stop()
+    led.green()
 else:
     print("camera is not working")
     #pygame.time.delay(4000)
     #sound.stop()
+    led.red()
 font = cv2.FONT_HERSHEY_COMPLEX_SMALL
 
 score=0
@@ -128,3 +131,4 @@ while(True):
 #once we press q entire process is shut down
 cap.release()
 cv2.destroyAllWindows()
+led.blue()
