@@ -66,8 +66,8 @@ while(True):
 
 
 # the below 2 lines of code is for the demeonstration of finding face
-    for (x,y,w,h) in faces:
-        cv2.rectangle(frame, (x,y) , (x+w,y+h) , (100,100,100) , 1 )
+    #for (x,y,w,h) in faces:
+        #cv2.rectangle(frame, (x,y) , (x+w,y+h) , (100,100,100) , 1 )
 #below code detect whether the right_eye is opened or not
     for (x,y,w,h) in right_eye:
         #count=0;
