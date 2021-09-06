@@ -10,6 +10,7 @@ writer= cv2.VideoWriter('nightvideo.mp4', cv2.VideoWriter_fourcc(*'DIVX'), 20, (
 
 while True:
     ret,frame= cap.read()
+    frame=cv2.flip(frame,0)
 
     writer.write(frame)
 
