@@ -8,6 +8,7 @@ from pygame import mixer
 import time
 import led
 import buzzer
+import RPi.GPIO as GPIO
 
 
 
