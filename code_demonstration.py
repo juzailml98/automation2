@@ -26,7 +26,7 @@ model = load_model(model_path+"\cnnCat2.h5")
 
 print("recieved the model,and casscade,and loaded the necessary packages")
 
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(0)
 if cap.isOpened():
     sound.play()
     pygame.time.delay(2000)
