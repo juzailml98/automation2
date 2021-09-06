@@ -110,7 +110,7 @@ while(True):
 #if score is greater than 50 it gives a beep sound
     if(score>50):
         score=50
-        buzzer
+        buzzer.sound()
 
 
         #try:
