@@ -1,8 +1,8 @@
-
+import sys
+import RPi.GPIO as GPIO
+import time
 def sound(
-    import sys
-    import RPi.GPIO as GPIO
-    import time
+
     triggerPIN = 23
     #GPIO.setmode(GPIO.BCM)
     GPIO.setup(triggerPIN,GPIO.OUT)
