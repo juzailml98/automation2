@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setup(triggerPIN,GPIO.OUT)
 buzzer = GPIO.PWM(triggerPIN, 1000)
-def sound(
+def sound():
 
     triggerPIN = 23
 #GPIO.setmode(GPIO.BCM)
@@ -12,4 +12,3 @@ def sound(
     time.sleep(2)
 #GPIO.cleanup()
 #sys.exit()
-)
