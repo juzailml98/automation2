@@ -11,6 +11,6 @@ def sound():
 #GPIO.setmode(GPIO.BCM)
 # Set frequency to 1 Khz
     buzzer.start(10) # Set dutycycle to 10
-    time.sleep(2)
+    time.sleep(0.2)
 #GPIO.cleanup()
 #sys.exit()
