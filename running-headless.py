@@ -133,8 +133,10 @@ while(True):
 
     except KeyboardInterrupt:
         cap.release()
-        GPIO.cleanup()
         cv2.destroyAllWindows()
         led.blue()
+        GPIO.cleanup()
+
+
         sys.exit()
 #once we press q entire process is shut down
