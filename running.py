@@ -108,8 +108,8 @@ while(True):
         score=0
     cv2.putText(frame,'Score:'+str(score),(200,height-20), font, 1,(255,0,0),1,cv2.LINE_AA)
 #if score is greater than 50 it gives a beep sound
-    if(score>50):
-        score=50
+    if(score>25):
+        score=25
         buzzer.sound()
 
 
