@@ -7,7 +7,7 @@ import time
 
 print('packages imported')
 mixer.init()
-sound = mixer.Sound('sound/alarm.wav')
+sound = mixer.Sound('sound/alerter.wav')
 model_path=os.getcwd()
 print(model_path)
 face = cv2.CascadeClassifier(r'C:\Users\MSI GL63\Desktop\automation3\automation\haarmodels/haarcascade_frontalface_alt.xml')

@@ -10,7 +10,7 @@ import time
 
 
 mixer.init()
-sound = mixer.Sound('sound/alarm.wav')
+sound = mixer.Sound('sound/alerter.wav')
 model_path=os.getcwd()
 pather=r""+model_path
 face = cv2.CascadeClassifier(model_path+"\haarmodels/haarcascade_frontalface_alt.xml")
